@@ -1,0 +1,7 @@
+transformers==4.20.0
+datasets
+evaluate
+accelerate
+touch
+xformers
+numpy
