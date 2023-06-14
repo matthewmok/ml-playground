@@ -1,7 +1,5 @@
-transformers==4.20.0
-datasets
 evaluate
-accelerate
-touch
-xformers
 numpy
+psycopg2-binary
+transformers==4.20.0
+xformers

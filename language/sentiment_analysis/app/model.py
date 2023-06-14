@@ -1,11 +1,14 @@
 from transformers import pipeline
+import os
 
-MODEL_DIR = "model/huggingface_SA_model"
+model = None
 
 
-def predict_pipeline(
-    text: str, pipeline_name: str = "prediction_pipeline", model_dir: stv = MODEL_DIR
-):
-    model = pipeline(pipeline_name, model=model_dir)
+def predict_pipeline(text: str):
     prediction = model(text)
     return prediction[0]
+
+
+def load_model(model_dir: str):
+    global model
+    model = pipeline("sentiment-analysis", model=model_dir)
