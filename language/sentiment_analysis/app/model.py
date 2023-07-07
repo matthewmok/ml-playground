@@ -11,4 +11,5 @@ def predict_pipeline(text: str):
 
 def load_model(model_dir: str):
     global model
+    print(f"Loading model from {model_dir}")
     model = pipeline("sentiment-analysis", model=model_dir)
